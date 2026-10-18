@@ -36,13 +36,14 @@ MCP-сервер, который скачивает изображение **с 
 
 ### Установка / регистрация
 1. Положите `server.py` в любую папку, например `C:/tests_model/web-photo-mcp/`.
-2. В `opencode.json` добавьте запись под `mcpServers`:
+2. В `opencode.json` добавьте запись под ключом `mcp`:
    ```json
    {
-     "mcpServers": {
+     "mcp": {
        "web-photo": {
-         "command": "C:\\Python314\\python.exe",
-         "args": ["C:/tests_model/web-photo-mcp/server.py"]
+         "type": "local",
+         "command": ["C:\\Python314\\python.exe", "C:/tests_model/web-photo-mcp/server.py"],
+         "enabled": true
        }
      }
    }
@@ -86,13 +87,14 @@ MCP-сервер, который скачивает изображение **с 
 
 ### Installation / registration
 1. Place `server.py` in any folder, e.g. `C:/tests_model/web-photo-mcp/`.
-2. Add an entry under the `mcpServers` key in `opencode.json`:
+2. Add an entry under the `mcp` key in `opencode.json`:
    ```json
    {
-     "mcpServers": {
+     "mcp": {
        "web-photo": {
-         "command": "C:\\Python314\\python.exe",
-         "args": ["C:/tests_model/web-photo-mcp/server.py"]
+         "type": "local",
+         "command": ["C:\\Python314\\python.exe", "C:/tests_model/web-photo-mcp/server.py"],
+         "enabled": true
        }
      }
    }
